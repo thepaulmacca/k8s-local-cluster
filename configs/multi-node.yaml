@@ -33,6 +33,10 @@ kubeadmConfigPatches:
   kind: KubeProxyConfiguration
   # configure proxy metrics bind address
   metricsBindAddress: 0.0.0.0
+networking:
+  # the default CNI will not be installed
+  disableDefaultCNI: true
+  podSubnet: 192.168.0.0/16
 nodes:
 # the control plane node config
 - role: control-plane
