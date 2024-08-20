@@ -10,6 +10,13 @@ echo "Installing Calico CNI🔌..."
 
 kubectl apply -f https://raw.githubusercontent.com/projectcalico/calico/v3.28.1/manifests/calico.yaml
 
+echo "Waiting for Calico CNI to become ready⌛..."
+
+kubectl wait --namespace kube-system \
+  --for=condition=ready pod \
+  --selector=k8s-app=calico-kube-controllers \
+  --timeout=5m
+
 echo "Installing NGINX Ingress Controller🚦..."
 
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/main/deploy/static/provider/kind/deploy.yaml
