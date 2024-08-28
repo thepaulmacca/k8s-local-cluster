@@ -34,6 +34,6 @@ helmfile apply --file helmfile.yaml
 
 echo "Creating Argo CD API Server Ingress🚦..."
 
-kubectl apply -f argocd-server-ingress.yaml
+kubectl apply -f ../argocd-server-ingress.yaml
 
 echo "Setup complete! ✅"

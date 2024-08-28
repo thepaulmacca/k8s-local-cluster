@@ -3,7 +3,6 @@ set -o errexit
 
 minikube start \
   --addons=ingress \
-  --addons=ingress-dns \
   --addons=metrics-server \
   --cni=calico \
   --cpus=no-limit \
@@ -19,5 +18,9 @@ minikube start \
 echo "Applying helmfile ☸️..."
 
 helmfile apply --file helmfile.yaml
+
+echo "Creating Argo CD API Server Ingress🚦..."
+
+kubectl apply -f ../argocd-server-ingress.yaml
 
 echo "Setup complete! ✅"
