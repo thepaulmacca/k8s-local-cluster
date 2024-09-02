@@ -30,10 +30,10 @@ kubectl wait --namespace ingress-nginx \
 
 echo "Applying Helmfile ☸️..."
 
-helmfile apply --file helmfile.yaml
+helmfile apply -f helmfile.yaml
 
 echo "Creating Argo CD API Server Ingress🚦..."
 
-kubectl apply -f ../argocd-server-ingress.yaml
+kubectl apply -f argocd-server-ingress.yaml
 
 echo "Setup complete! ✅"

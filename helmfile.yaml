@@ -22,10 +22,6 @@ releases:
   - name: descheduler
     namespace: kube-system
     chart: descheduler/descheduler
-  - name: envoy-gateway
-    namespace: envoy-gateway-system
-    chart: oci://docker.io/envoyproxy/gateway-helm
-    version: v0.0.0-latest
   - name: goldilocks
     namespace: goldilocks
     chart: fairwinds-stable/goldilocks
