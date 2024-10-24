@@ -1,0 +1,10 @@
+## To setup run - pre-commit install
+## To run manually - pre-commit run --all-files
+## To run individual hook - pre-commit run -a trailing-whitespace
+repos:
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.5.0
+    hooks:
+    -   id: check-executables-have-shebangs
+    -   id: end-of-file-fixer
+    -   id: trailing-whitespace
