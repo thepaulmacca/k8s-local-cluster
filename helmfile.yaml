@@ -5,6 +5,8 @@ repositories:
     url: https://kubernetes-sigs.github.io/descheduler/
   - name: fairwinds-stable
     url: https://charts.fairwinds.com/stable
+  - name: jetstack
+    url: https://charts.jetstack.io
   - name: kedacore
     url: https://kedacore.github.io/charts
   - name: metrics-server
@@ -19,6 +21,12 @@ releases:
   - name: argo-rollouts
     namespace: argo-rollouts
     chart: argo/argo-rollouts
+  - name: cert-manager
+    namespace: cert-manager
+    chart: jetstack/cert-manager
+    set:
+      - name: crds.enabled
+        value: true
   - name: descheduler
     namespace: kube-system
     chart: descheduler/descheduler
