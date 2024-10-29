@@ -17,7 +17,7 @@ Run `./setup.sh` to install a single-node cluster (default).
 
 ### Multi-Node Cluster
 
-Run `./setup.sh` to install a multi-node cluster with one control plane and 2 worker nodes.
+Run `./setup.sh multi-node.yaml` to install a multi-node cluster with one control plane and 2 worker nodes.
 
 ## Installed Software
 
