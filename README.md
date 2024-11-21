@@ -24,6 +24,6 @@ Run `./setup.sh multi-node.yaml` to install a multi-node cluster with one contro
 The `setup.sh` script installs:
 
 - Calico for testing Network Policies
-- Ingress NGINX for testing Ingress
+- NGINX Ingress Controller
 
-All other software is currently installed using a [helmfile](helmfile.yaml). I'm planning on using Argo CD instead in the near future.
+All other software is currently installed using a [helmfile](helmfile.yaml).
