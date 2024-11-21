@@ -27,22 +27,3 @@ The `setup.sh` script installs:
 - Ingress NGINX for testing Ingress
 
 All other software is currently installed using a [helmfile](helmfile.yaml). I'm planning on using Argo CD instead in the near future.
-
-## Ingress
-
-I'm using [nip.io](https://nip.io/) for the below resources.
-
-### Argo CD API Server
-
-An ingress resource is created for accessing the Argo CD API Server. Go to [http://argocd.127.0.0.1.nip.io](http://argocd.127.0.0.1.nip.io) and then follow the rest of the [login instructions](https://argo-cd.readthedocs.io/en/stable/getting_started/#4-login-using-the-cli).
-
-### Prometheus
-
-Ingress has been enabled via the [values-kube-prometheus-stack.yaml](values-kube-prometheus-stack.yaml) file. Go to [http://prometheus.127.0.0.1.nip.io](http://prometheus.127.0.0.1.nip.io) to access the server.
-
-### Grafana
-
-Ingress has been enabled via the [values-kube-prometheus-stack.yaml](values-kube-prometheus-stack.yaml) file. Go to [http://grafana.127.0.0.1.nip.io](http://grafana.127.0.0.1.nip.io) and login with:
-
-- Username: admin
-- Password: prom-operator
