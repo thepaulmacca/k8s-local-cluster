@@ -30,9 +30,6 @@ releases:
   - name: descheduler
     namespace: kube-system
     chart: descheduler/descheduler
-  - name: goldilocks
-    namespace: goldilocks
-    chart: fairwinds-stable/goldilocks
   - name: keda
     namespace: keda
     chart: kedacore/keda
@@ -40,8 +37,6 @@ releases:
     namespace: monitoring
     chart: prometheus-community/kube-prometheus-stack
     disableValidationOnInstall: true # temp fix for https://github.com/helmfile/helmfile/issues/763
-    values:
-      - values-kube-prometheus-stack.yaml
   - name: metrics-server
     namespace: kube-system
     chart: metrics-server/metrics-server
